@@ -1421,8 +1421,8 @@ app.post('/feedback', (req, res) => {
 
 //app.listen(3000);
 
-const server = app.listen(3000, '10.143.106.145', () => {
-  console.log('Server is running on port 3000');
+const server = app.listen(() => {
+	console.log('Server is running on port', process.env.PORT || 80);
 });
 
 //server.listen(8443, () => {
